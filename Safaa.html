@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(225, 226, 228);">
+    <div class="container" style="width:400px;height: 720px;background-color:white;margin: auto ;text-align: center;">  
+        <div class="one" style="width: 100%;height: 300px;background-color: white;">
+            <p style="padding:10px;font-size: 20px;">Winnres</p>
+            <div class="cont1" style="width: 40%;height: 245px;background-color:white;margin: auto; ">
+                <p id="counter1" style="display: none;">8</p>
+               <img id="img1" src="img/1.jpg" style="width: 100px;height: 100px;border-radius: 50%;">
+               <p id="name1">Ahmed</p>
+               <p id="coment1" style="display: inline-block;border-left: 10px solid rgb(231, 230, 229) ;border-radius: 10px;padding: 10px;background-color: aliceblue;">never give up</p>
+             </div>
+        </div>
+        <br>
+        <hr style="margin: 0 25px;">
+        <div class="two" style="width: 100%;height: 320px;background-color:white;position: relative;">
+            <p style="padding: 5px;font-size: 20px;">substitute Winnres</p>
+            <div class="cont2" style="position: absolute;left: 0;bottom: 10px; width: 40%;height: 260px;background-color:white; margin: 0 20px;">
+                <p id="counter2" style="display: none;">6</p>
+               <img  id="img2" src="img/1.jpg" style="width: 100px;height: 100px;border-radius: 50%;">
+               <p id="name2">Ahmed</p>
+               <p id="coment2" style="display: inline-block;border-left: 10px solid rgb(231, 230, 229) ;border-radius: 10px;padding: 10px;background-color: aliceblue;">never give up</p>
+             </div>
+            <div class="cont3" style="position: absolute;right: 0;bottom: 10px; width: 40%;height: 260px;background-color:white; margin: 0 20px;">
+                <p id="counter3" style="display: none;">6</p>
+               <img  id="img3" src="img/1.jpg" style="width: 100px;height: 100px;border-radius: 50%;">
+               <p id="name3">Ahmed</p>
+               <p  id="coment3" style="display: inline-block;border-left: 10px solid rgb(231, 230, 229) ;border-radius: 10px;padding: 10px;background-color: aliceblue;">never give up</p>
+             </div>
+        </div>
+        <button style="padding: 10px 50px;border-radius: 15px;">start</button>
+        <br>
+        <span id="result1" style="display: none;"></span> 
+        <span id="result2" style="display: none;"></span> 
+        <span id="result3" style="display: none;"></span>
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $("button").one("click",function(){   
+                  var x=["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img/6.jpg","img/7.jpg","img/8.jpg","img/9.jpg","img/10.jpg","img/9.jpg"]
+                  var y=["Ali","Mohaed","Ibrahem","saber","mostafa","khaled","Axe","marwan","Abas","khlil","dawood"]
+                  var z=["aaaaaaaa","bbbbbb","jjjjj","kkkkkk","oooo","zzzz","xxxx","bbbb","uuuu","vvv","ggggggg"]
+                $("#counter1").show(100,function(){  
+                    var lop=setInterval(function(){
+                         var ahmd=$("#counter1").text()
+                          $("#counter1").text(ahmd-1)
+                          var ahmed=$("#counter1").text();
+                          if(ahmed==1){
+                              clearInterval(lop),
+                              $("#counter1").hide();
+                          }
+                    },300)  
+                   var my= setInterval(function(){
+                        $("#result1").text(Math.floor(Math.random()*10))
+                        var r1 =$("#result1").text()
+                        $("#img1").attr("src",x[r1])
+                        $("#name1").text(y[r1])
+                        $("#coment1").text(z[r1])
+                        var ahmed=$("#counter1").text();
+                     if(ahmed==1){
+                      clearInterval(my)
+
+                     }
+                    },50)
+                });
+            
+                setTimeout(function(){
+                    $("#counter2").show(100,function(){  
+                       var lopp=setInterval(function(){
+                         var mhmd=$("#counter2").text()
+                          $("#counter2").text(mhmd-1)
+                          var mhmed=$("#counter2").text();
+                          if(mhmed==1){
+                            clearInterval(lopp),
+                             $("#counter2").hide()
+                          }
+                    },300)  
+                   var he= setInterval(function(){
+                        $("#result2").text(Math.floor(Math.random()*10))
+                        var r2 =$("#result2").text()
+                        $("#img2").attr("src",x[r2])
+                        $("#name2").text(y[r2])
+                        $("#coment2").text(z[r2])
+                        var mhmed=$("#counter2").text();
+                      if(mhmed==1){
+                        clearInterval(he);
+                      }
+                    },50)
+                });
+                },2400)
+
+                
+                
+                setTimeout(function(){
+                    $("#counter3").show(100,function(){  
+                       var loppp=setInterval(function(){
+                         var mahmd=$("#counter3").text()
+                          $("#counter3").text(mahmd-1)
+                          var mahmed=$("#counter3").text();
+                          if(mahmed==1){
+                            clearInterval(loppp),
+                             $("#counter3").hide()
+                          }
+                    },300)  
+                   var she= setInterval(function(){
+                        $("#result3").text(Math.floor(Math.random()*10))
+                        var r3 =$("#result3").text()
+                        $("#img3").attr("src",x[r3])
+                        $("#name3").text(y[r3])
+                        $("#coment3").text(z[r3])
+                        var mahmed=$("#counter3").text();
+                      if(mahmed==1){
+                        clearInterval(she);
+                      }
+                    },50)
+                });
+                },4000)
+
+                   
+               
+
+                
+        })
+
+    </script>
+</body>
+</html>
